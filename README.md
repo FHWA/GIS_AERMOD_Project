@@ -31,14 +31,16 @@ o Organizing results and visualization
 
 
 
----------------------------[insert pic 2]----------------------------------------------
+![GTA 2](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic2.PNG)
+
 
 The Data Tab takes GIS as input, and project into a Cartesian coordinated (meter) Geo-dataframe with user-defined study boundary (spatial range where concentration profile will be modeled) and reference location (0, 0) as required by AERMOD
 
 
 
 ***Data Tab***
-------------------------[insert pic 3]--------------------------------------------------
+![GTA 3](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic3.PNG)
+
 Pictured above is the interface for the data tab of GIS-to-AERMOD Tool
 
 
@@ -47,7 +49,8 @@ Pictured above is the interface for the data tab of GIS-to-AERMOD Tool
 
 *This example will be of Dupont Circle at Washington D.C.*
 
------------------------[insert pic 4]-----------------------------------------------------
+![GTA 4](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic4.PNG)
+
 
 GIS Source: [https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_4](https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41)[1](https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41)
 
@@ -108,7 +111,8 @@ Columns required from GIS:
 **4) Locate study boundary and reference point from the map by clicking "Locate from graph"**
 
 
---------------------[insert pic 5]--------------------------------------------------
+![GTA 5](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic5.PNG)
+
 
 
     Click “Draw boundary”, then use mouse to draw a red square in map as the study boundary
@@ -150,9 +154,10 @@ Columns required from GIS:
 
 **Example: Original GIS to Projected GIS**
 
------------------------------[insert pic 6]-----------------------------------------------
+![GTA 6](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic6.PNG)
+
  Original GIS (in latitude and longitude)
------------------------------[insert pic 7]-----------------------------------------------
+![GTA 7](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic7.PNG)
 Projected GIS (in meters)
 
 
