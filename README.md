@@ -156,8 +156,10 @@ Columns required from GIS:
 
 ![GTA 6](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic6.PNG)
 
- Original GIS (in latitude and longitude)
+Original GIS (in latitude and longitude)
+ 
 ![GTA 7](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic7.PNG)
+
 Projected GIS (in meters)
 
 
@@ -165,11 +167,12 @@ Projected GIS (in meters)
 
 ***Road Tab***
 
---------------------------------[insert pic 8]------------------------------------------------------
+![GTA 8](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic8.PNG)
+
 
 **Road Tab takes projected GIS and generate geometry for AERMOD source of interest. The geometry information will be stored as .CSV**
 
-------------------------------------[insert pic 9]--------------------------------------------------------
+![GTA 9](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic9.PNG)
 
 
 
@@ -216,7 +219,8 @@ Users can choose to generate the AERMOD surce type they are interested in:
 
 ***Receptors Tab***
 
----------------------------------------[insert pic 10]--------------------------------------------
+![GTA 10](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic10.PNG)
+
 
 Receptors Tab takes projected GIS, generate near-road receptors and gridded receptors with user specified layers and/or intervals
 
@@ -224,7 +228,8 @@ Receptors Tab takes projected GIS, generate near-road receptors and gridded rece
 
 
 
---------------------------------------[insert pic 11]------------------------------------------------
+![GTA 11](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic11.PNG)
+
 
 
 "Information for receptors":
@@ -236,7 +241,8 @@ Receptors Tab takes projected GIS, generate near-road receptors and gridded rece
     A graphic description that displays a visualization of the receptors
     
     
-------------------------------------------[insert pic 12]-------------------------------------------
+![GTA 12](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic12.PNG)
+
 
 
 
@@ -280,7 +286,8 @@ Receptors coordinates will be stored at:
 
 **‘receptors\_list.csv’:**
 
--------------------------------------[insert pic 13]---------------------------------------------------
+![GTA 13](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic13.PNG)
+
 
 coord_aer field: ‘X Y Z’ in AERMOD format
 
@@ -296,14 +303,14 @@ Emissions Tab takes the emission rate from GIS file and generate AERMOD emission
 
 
 
+![GTA 14](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic14.PNG)
 
-----------------------------------[insert pic 14]------------------------------------------------
 
 
 
 
 **Information for emissions**:
-    • A description on how to generate emission files in this Tab. All the generated emission files will be stored in ‘\DC\_DupontCircle\results\emission\\*’
+• A description on how to generate emission files in this Tab. All the generated emission files will be stored in ‘\DC\_DupontCircle\results\emission\\*’
 
 
 
@@ -322,7 +329,8 @@ Emissions Tab takes the emission rate from GIS file and generate AERMOD emission
 
 The generated emission rate csv files (‘em\_AREA.csv’, ‘em\_LINE.csv’, ‘em\_RLINEXT.csv’, and ‘em\_VOLUME\_XX.csv’) contain one column ‘em\_aer’ – AERMOD emission rate.
 
------------------------------------[insert pic 15]---------------------------------------------
+![GTA 15](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic15.PNG)
+
 
 
 
@@ -332,7 +340,8 @@ The generated emission rate csv files (‘em\_AREA.csv’, ‘em\_LINE.csv’, �
 Compilation Tab takes generated geometry csv (from Road Tab) , receptors csv (from Receptors Tab) , and emissions csv (from Emission Tab) , compile to AERMOD input file, and conduct AERMOD runs (if emissions are available)
 
 
----------------------------------------[insert pic 16]---------------------------------------
+![GTA 16](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic16.PNG)
+
 
 
 
@@ -343,7 +352,8 @@ If you have emission csv files available from Emission Ta b, select ‘Run AERMO
 
 Select pollutant type and modeling period. Depending on POLLUTID, the values of AVERTIME is consistent with NAAQS
 
--------------------------------------[insert pic 17]--------------------------------------------
+![GTA 17](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic17.PNG)
+
 
 
 
@@ -480,17 +490,20 @@ Reminder: running AERMOD may take seconds, minutes, hours, or even days, dependi
 
 Results Tab takes AERMOD output files ‘.out’, organize concentration results into csv files, and visualize concentration profile in heat map
 
----------------[Insert Pic 18]---------------------------------------
+![GTA 18](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic18.PNG)
+
 
 • Click to upload AERMOD ‘.out’ and organize concentration into ‘.csv’ file. Takes seconds to minutes, depending on the number of receptor results. In the example, ‘RLINEXT_Line_CO_1.out’ was uploaded
 
 ‘RLINEXT_Line_CO_1.out’ in text format
 
--------------------------[Insert Pic 19]---------------------------------------
+![GTA 19](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic19.PNG)
+
 
 ‘RLINEXT_Line_CO_1.csv’
 
-----------------------------------------[Insert Pic 20]-----------------------------------------
+![GTA 20](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic20.PNG)
+
 
 
 
@@ -498,13 +511,15 @@ Results Tab takes AERMOD output files ‘.out’, organize concentration results
 Users can type the concentration range to visualize (default as from 0 to maximum concentration value in the file) 
 Then click the button to visualize concentration (range 0 - 2)
 
-----------------------------------------------[Insert Pic 21]-----------------------------------------
+![GTA 21](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic21.PNG)
+
 
 
 
 Users can type the concentration range to visualize (default as from 0 to maximum concentration value in the file)
 Then click the button to visualize concentration (range 0 - 3)
 
---------------------------------[Insert Pic 22]--------------------------------------------------
+![GTA 22](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic22.PNG)
+
 
 
