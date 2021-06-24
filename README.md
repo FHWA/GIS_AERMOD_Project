@@ -1,4 +1,4 @@
-﻿
+
 
 
 **GTA (GIS-To-AERMOD) is an off-line tool that enables automatic conversion from roadway GIS shape files to AERMOD sources, which include:**
@@ -26,7 +26,6 @@ o Organizing results and visualization
 
 **Software Structure**
 
-----------------------------[insert pic 1]--------------------------------------------
 ![GTA 1](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic1.PNG)
 
 
@@ -38,7 +37,7 @@ The Data Tab takes GIS as input, and project into a Cartesian coordinated (meter
 
 
 
-**Data Tab**
+***Data Tab***
 ------------------------[insert pic 3]--------------------------------------------------
 Pictured above is the interface for the data tab of GIS-to-AERMOD Tool
 
@@ -54,7 +53,6 @@ GIS Source: [https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_4
 
 **2) Identify GIS features**
 
--------------------------[insert pic 5]----------------------------------------------------
 
 Columns required from GIS:
 
@@ -79,136 +77,72 @@ Columns required from GIS:
 
 **3) Input the original and destination EPSG code**
 
---------------[insert pic 6]-----------------------------------------------------
   
-Available at: [https://spatialreference.org/ref/epsg/](https://spatialreference.org/ref/epsg/)
+    Available at: [https://spatialreference.org/ref/epsg/](https://spatialreference.org/ref/epsg/)
 
 
 
-**Origin EPSG**: the EPSG code for the uploaded GIS file:
+    **Origin EPSG**: the EPSG code for the uploaded GIS file:
 
-  • This is the 4-digit code representing coordinate projection type of uploaded GIS
+    • This is the 4-digit code representing coordinate projection type of uploaded GIS
 
-  • In this example, GIS geometry is in GPS longitude and latitude (<https://spatialreference.org/ref/epsg/4326/>) used by the GPS satellite navigation system
+    • In this example, GIS geometry is in GPS longitude and latitude (<https://spatialreference.org/ref/epsg/4326/>) used by the GPS satellite navigation system
 
-  • Coordinate info from ArcMap
+    • Coordinate info from ArcMap
   
-**Destination EPSG**: ESPG code and unit for the local projected coordinate system:
+    **Destination EPSG**: ESPG code and unit for the local projected coordinate system:
 
-  • This is the 4-digit code representing local Cartesian coordan systems that you want convert the GIS data to
+    • This is the 4-digit code representing local Cartesian coordan systems that you want convert the GIS data to
 
-  • In this example, we choose to convert to GIS geometry into “NAD83 / Maryland (ftUS)” that covers the GIS area in unit of “ft”(<https://spatialreference.org/ref/epsg/2248/>)
+    • In this example, we choose to convert to GIS geometry into “NAD83 / Maryland (ftUS)” that covers the GIS area in unit of “ft”(<https://spatialreference.org/ref/epsg/2248/>)
 
-  • EPSG 4-digits code: 2248
+    • EPSG 4-digits code: 2248
 
-  • You may search state (e.g., Maryland, Georgia, New Mexico, etc) at the website for the EPSG code of local destination coordinates
+    • You may search state (e.g., Maryland, Georgia, New Mexico, etc) at the website for the EPSG code of local destination coordinates
 
-  • Make sure your GIS was within the bounds of the reference to qualify for this destination EPSG
+    • Make sure your GIS was within the bounds of the reference to qualify for this destination EPSG
 
 
 
 
-**4) Locate study boundary and reference point from the map**
+**4) Locate study boundary and reference point from the map by clicking "Locate from graph"**
 
---------------------[insert pic 7]--------------------------------------------------
 
---------------------[insert pic 8]--------------------------------------------------
+--------------------[insert pic 5]--------------------------------------------------
 
 
+    Click “Draw boundary”, then use mouse to draw a red square in map as the study boundary
 
+    • You can re-click the button and re-draw the boundary
 
+    • Only concentration within the square will be modeled. Receptor will also be generated within the square
 
-**Click “Draw boundary”, then use mouse to draw**
 
-**a red square in map as the study boundary**
 
-• **You can re-click the button and re-draw the**
 
-**boundary**
+    Click “Draw reference point”, then use mouse to click a point within the map as reference location
 
-• **Only concentration within the square will be**
+    • You can re-click the button and re-locate the reference
 
-**modeled. Receptor will also be generated**
+    • All the x- y- coordinates will be adjusted by setting coordinate of reference as (0, 0)
 
-**within the square**
+    • Reference does not have to be within the square
 
-**13**
 
 
+    After the boundary and reference point are determined, click “Confirm & close” to get back to Data Tab
 
 
 
-**Data Ta b**
 
-**Click “Draw reference point”, then use mouse to**
 
-**click a point within the map as reference location**
 
-• **You can re-click the button and re-locate the**
+    Coordinates for boundaries and reference point are listed in the textbox. These numbers can be directly modified if users want to type the information directly.
 
-**reference**
 
-• **All the x- y- coordinates will be adjusted by**
 
-**setting coordinate of reference as (0, 0)**
 
-• **Reference does not have to be within the**
-
-**square**
-
-**14**
-
-
-
-
-
-**Data Ta b**
-
-**After the boundary and reference point are**
-
-**determined, click “Confirm & close” to get back**
-
-**to Data Tab**
-
-**15**
-
-
-
-
-
-**Data Ta b**
-
-**Coordinates for boundaries and reference point are listed in**
-
-**textbox. These numbers can be directly modified if users want to**
-
-**type the information direct ly.**
-
-**Y high**
-
-**Reference x & y**
-
-**Y low**
-
-**X right**
-
-**16**
-
-**X left**
-
-
-
-
-
-**Data Ta b**
-
-**Click this button to verify all the input in the Data Ta b, and project**
-
-**GIS into new Cartesian system (in unit of meters) with specified**
-
-**reference point**
-
-**17**
+**5) Click the button "Verify Inputs and Convert GIS Coordinates" to verify all the input in the Data Tab, and project GIS into the new Cartesian system (in unit of meters) with the specified reference point**
 
 
 
@@ -216,1155 +150,356 @@ Available at: [https://spatialreference.org/ref/epsg/](https://spatialreference.
 
 **Example: Original GIS to Projected GIS**
 
-**Original GIS**
+-----------------------------[insert pic 6]-----------------------------------------------
+ Original GIS (in latitude and longitude)
+-----------------------------[insert pic 7]-----------------------------------------------
+Projected GIS (in meters)
 
-**Projected GIS**
 
-**Longitude**
 
-**X (meter)**
 
-**18**
+***Road Tab***
 
+--------------------------------[insert pic 8]------------------------------------------------------
 
+**Road Tab takes projected GIS and generate geometry for AERMOD source of interest. The geometry information will be stored as .CSV**
 
+------------------------------------[insert pic 9]--------------------------------------------------------
 
 
-**Road Tab**
 
-**Input**
 
-**Process**
+Users can choose to generate the AERMOD surce type they are interested in:
 
-**Output**
+    • Line (LINE, RLINE, RLINEXT) – ‘Line.csv’
 
-**Projected GIS w/**
+    • AREA – ‘AREA.csv’
 
-**new Cartesian**
+    • VOLUME – ‘VOLUME\_XX.csv’, XX refers to aximum parcel size
 
-Data Tab
 
-**Road Ta b**
 
-**coordinate (m) &**
 
-**reference location**
+**Line Source** includes:
+     • A written description of the line source
+     • A graphic description of the line source in the "graphic example" button
+     • The "LINE columns" button generates columns of line geometry as "Line.csv"
+     • The "Generate Line" button generates the Line source geometry, and also stores as "Line.csv"
+     • The "Visualize Line" button to allows you to view the geometry of roadways in Line geometry
 
-**Geometry for**
 
-**Line, AREA,**
 
-**and/or**
+**AREA Source** includes:
+     • A written description of the area source
+     • A graphic description of the area source in the "graphic example" button
+     • The "AREA coluumns" button generates columns of area geometry as "AREA.csv"
+     • The "Generate Area" button generates area source geometry as "AREA.csv"
+     • The "Visualize AREA" button allows you to view the geometry of roadways in AREA geometry
+     
+     
+     
+**VOLUME Source** includes:
+     • A written description of the area source
+     • A graphic description of the volume source in the "graphic example" button
+     • The "VOLUME columns" button generates columns of volume geometry as "VOLUME_XX.csv"
+     • The "Generate VOLUME" button generates area source geometry as "VOLUME_XX.csv"
+     • The "Visualize VOLUME" button allows you to view the geometry of roadways in VOLUME geometry (it usually takes a long time to generate a volume graph)
 
-**VOLUME source**
 
-**Road Tab takes projected GIS and generate geometry**
 
-**for AERMOD source of interest. The geometry**
 
-**information will be stored as .CSV**
 
-Receptors Tab
+***Receptors Tab***
 
-Emissions Tab
+---------------------------------------[insert pic 10]--------------------------------------------
 
-Compilation Tab
+Receptors Tab takes projected GIS, generate near-road receptors and gridded receptors with user specified layers and/or intervals
 
-Results Tab
 
-**19**
 
 
 
+--------------------------------------[insert pic 11]------------------------------------------------
 
 
-**Road Tab**
+"Information for receptors":
+    A description on how to prepare for receptors in this Tab
+    
+    
+    
+ "Graphic Example" button:
+    A graphic description that displays a visualization of the receptors
+    
+    
+------------------------------------------[insert pic 12]-------------------------------------------
 
-**20**
 
 
+**Near Road Receptors**
 
+    • Users may choose to either upload csv of receptors configuration (1.1), or directly type in box chart (1.2). In this example, we uploaded ‘receptor\_layers.csv’
 
+    • For road type 1 (freeway in example), generate 4 layers of receptors at 5, 15, 50, and 100 meters away from road edge, with receptors interval of 20, 30, 50 and 100 meters within each layer
+`
+    • For road type 2 (arterial in example), generate 3 layers of receptors at 5, 15, and 50 meters away from road edge, with receptors interval of 20, 30 and 50 meters within each layer
 
-**Road Tab**
 
-**Line**
 
-**AREA**
 
-**VOLUME**
+**Gridded Receptors**
 
-**Users can choose to generate the AERMOD**
+    • Enter intervals of gridded receptors (meters)
+    
+    • 200 meters was entered in the example
 
-**source type they are interested:**
 
-• Line (LINE, RLINE, RLINEXT) – ‘Line.csv’
 
-• AREA – ‘AREA.csv’
+**Receptors Elevation**
 
-• VOLUME – ‘VOLUME\_XX.csv’, XX refers to
+    • Enter elevation of receptors from ground (1.5 to 1.6 meters recommended)
 
-maximum parcel size
 
-**21**
 
+• Click this "Visualize receptors" to view distribution of generated receptors
 
 
+• Click "Generate receptors" to generate receptors.
 
+Receptors coordinates will be stored at:
 
-**Road Tab – Line Source**
+‘\DC\_DupontCircle\results\receptors\_list.csv’
 
-**Description of Line source**
 
-**A graphic description of Line source**
 
-**22**
 
 
+**‘receptors\_list.csv’:**
 
+-------------------------------------[insert pic 13]---------------------------------------------------
 
+coord_aer field: ‘X Y Z’ in AERMOD format
 
-**Road Tab – Line Source**
+rec_id field: Receptor ID
 
-**Click this button to generate Line source**
 
-**geometry and store as “Line.csv”**
 
-**Columns of Line geometry “Line.csv”**
 
-**\DC\_DupontCircle\results\Line.csv**
 
-**23**
+***Emissions Tab***
 
+Emissions Tab takes the emission rate from GIS file and generate AERMOD emission rates for various AERMOD sources
 
 
 
 
-**Road Tab – Line Source**
+----------------------------------[insert pic 14]------------------------------------------------
 
-**Click this button to view geometry of**
 
-**roadways in Line geometry**
 
-**24**
 
+**Information for emissions**:
+    • A description on how to generate emission files in this Tab. All the generated emission files will be stored in ‘\DC\_DupontCircle\results\emission\\*’
 
 
 
+• If emission rate is not available, select ‘skip’ and users can just create AERMOD input file without emission rate
 
-**Road Tab – AREA Source**
+• If emission rate is available, locate emission rate column in GIS, and identify the emission unit of this column
 
-**Description of AREA source**
+• Select source(s) to generate emission rate. For VOLUMN source, the road ‘VOLUME\_XX.csv’ file needs to be uploaded.
 
-**A graphic description of AREA source**
+• Click this button to generate emission rate. Store the emission rate (‘em\_AREA.csv’, ‘em\_LINE.csv’, ‘em\_RLINEXT.csv’, and ‘em\_VOLUME\_XX.csv’) into “\DC\_DupontCircle\results\emission\\*”
 
-**25**
 
 
 
 
 
-**Road Tab – AREA Source**
+The generated emission rate csv files (‘em\_AREA.csv’, ‘em\_LINE.csv’, ‘em\_RLINEXT.csv’, and ‘em\_VOLUME\_XX.csv’) contain one column ‘em\_aer’ – AERMOD emission rate.
 
-**Click this button to generate AREA source**
+-----------------------------------[insert pic 15]---------------------------------------------
 
-**geometry and store as “AREA.csv”**
 
-**Columns of AREA geometry “AREA.csv”**
 
-**\DC\_DupontCircle\results\AREA.csv**
 
-**26**
+***Compilation Tab***
 
+Compilation Tab takes generated geometry csv (from Road Tab) , receptors csv (from Receptors Tab) , and emissions csv (from Emission Tab) , compile to AERMOD input file, and conduct AERMOD runs (if emissions are available)
 
 
+---------------------------------------[insert pic 16]---------------------------------------
 
 
-**Road Tab – AREA Source**
 
-**Click this button to view geometry of**
+If you have emission csv files available from Emission Ta b, select ‘Run AERMOD’ and the tool will generate ‘.inp’ file, run AERMOD, and generate ‘.out’ file from AERMOD. If emissions are not available ( e.g., skipped the Emission Tab), select ‘Emission unavailable’, and the tool can still compile a ‘.inp’ file without emission information
 
-**roadways in AREA geometry**
 
-**27**
 
 
+Select pollutant type and modeling period. Depending on POLLUTID, the values of AVERTIME is consistent with NAAQS
 
+-------------------------------------[insert pic 17]--------------------------------------------
 
 
-**Road Tab – VOLUME Source**
 
-**Description of VOLUME source**
 
-**A graphic description of**
+Other information needed for AERMOD:
+    • URBANOPT
+    • FLAGPOLE
 
-**VOLUME source**
 
-**Maximum volume parcel size**
+Click the SURFILE and PROFFILE buttons to locate surface meteorology (.SFC) and upper profile meteorology (.PFL) file. 1hr CO concentration is modeled in the example with meteorology file ‘test\_1h.SFC’ and ‘test\_1h.PFL’ uploaded
 
-**(d <=8 m recommended)**
 
-**28**
 
+**Running AREA**
 
+    • Compile and run AERMOD for various sources. Users can choose to run one or more sources as needed
 
+    • Compile and run AERMOD for AREA Source
 
+    • Upload ‘AREA.csv’ generated from Road Tab ‘\DC_DupontCircle\results\AREA.csv’
 
-**Road Tab – VOLUME Source**
+    • Upload ‘receptors_list.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\receptors_list.csv’
 
-**Click this button to generate VOLUME source**
+    • Upload ‘em_AREA.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\emission\em_AREA.csv’
 
-**geometry and store as “VOLUME\_XX.csv”**
+    • Compile ‘.inp’, run AERMOD, and generate ‘.out’. Files stored in ‘\DC_DupontCircle\results\\*’ For this example running CO concentration in 1 hour, the files are named as:
 
-**Columns of VOLUME geometry “VOLUME\_XX.csv”**
+        • ‘AREA_CO_1.inp’
 
-**\DC\_DupontCircle\results\VOLUME\_8.0.csv**
+        • ‘AREA_CO_1.out’
 
-**29**
+        • ‘[Source]_[Pollutant]_[Period]’
 
 
 
 
 
-**Road Tab – VOLUME Source**
+**Running VOLUME**
 
-**Click this button to view geometry of roadways in VOLUME**
+    • Compile and run AERMOD for VOLUME Source**
 
-**geometry (usually takes very long to generate VOLUME graph)**
+    • Upload ‘VOLUME_XX.csv’ generated from Road Tab ‘\DC_DupontCircle\results\VOLUME_XX.csv’
+ 
+    • Upload ‘receptors_list.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\receptors_list.csv’
 
-**Max size = 8 m**
+    • Upload ‘em_VOLUME_XX.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\emission\em_VOLUME_XX.csv'
 
-**30**
+    • Compile ‘.inp’, run AERMOD, and generate ‘.out’. Files stored in ‘\DC\_DupontCircle\results\\*’ For this example running CO concentration in 1 hour, the files are named as:
 
+        • ‘VOLUME_CO_1.inp’
 
+        • ‘VOLUME_CO_1.out’
 
+        • ‘[Source]_[Pollutant]_[Period]’
 
 
-**Road Tab – VOLUME Source**
 
-**Click this button to view geometry of roadways in VOLUME**
 
-**geometry (usually takes very long to generate VOLUME graph)**
 
-**Max size = 20 m**
+**Running LINE**
 
-**31**
+    • Compile and run AERMOD for LINE Source**
 
+    • Upload ‘Line.csv’ generated from Road Tab ‘\DC_DupontCircle\results\Line.csv’
 
+    • Upload ‘receptors_list.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\receptors_list.csv’
 
+    • Upload ‘em_LINE.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\emission\em_LINE.csv’
 
+    • Compile ‘.inp’, run AERMOD, and generate ‘.out’. Files stored in ‘\DC\_DupontCircle\results\\*’ For this example running CO concentration in 1 hour, the files are named as:
 
-**Receptors Tab**
+        • ‘LINE_CO_1.inp’
 
-**Input**
+        • ‘LINE_CO_1.out’
 
-**Process**
+        • ‘[Source]_[Pollutant]_[Period]’
 
-**Output**
 
-**Projected GIS w/**
 
-**new Cartesian**
 
-Data Tab
 
-Road Tab
+**Running RLINE**
 
-**coordinate (m) &**
+    • Compile and run AERMOD for RLINE Source
 
-**reference location**
+    • Upload ‘Line.csv’ generated from Road Tab ‘\DC_DupontCircle\results\Line.csv’
 
-**Near-road**
+    • Upload ‘receptors_list.csv’ generated from Receptors Tab ‘\DC\_DupontCircle\results\receptors_list.csv’
 
-**receptors &**
+    • Upload ‘em_LINE.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\emission\em_LINE.csv’
 
-**gridded receptors**
+    • Compile ‘.inp’, run AERMOD, and generate ‘.out’. Files stored in ‘\DC_DupontCircle\results\\*’ For this example running CO concentration in 1 hour, the files are named as:
+        • ‘RLINE_CO_1.inp’
 
-**Receptors Tab**
+        • ‘RLINE_CO_1.out’
 
-Emissions Tab
+        • ‘[Source]_[Pollutant]_[Period]’
 
-Compilation Tab
 
-Results Tab
 
-**Receptors**
 
-**configuration**
 
-**Receptors Tab takes projected GIS, generate near-**
+**Running RLINEXT**
 
-**road receptors and gridded receptors with user**
+    • Compile and run AERMOD for RLINEXT Source
 
-**specified layers and/or intervals**
+    • Upload ‘Line.csv’ generated from Road Tab ‘\DC_DupontCircle\results\Line.csv’
 
-**32**
+    • Upload ‘receptors\_list.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\receptors_list.csv’
 
+    • Upload ‘em\_RLINEXT.csv’ generated from Receptors Tab ‘\DC_DupontCircle\results\emission\em_RLINEXT.csv’
 
+    • Compile ‘.inp’, run AERMOD, and generate ‘.out’. Files stored in ‘\DC\_DupontCircle\results\\*’ For this example running CO concentration in 1 hour, the files are named as:
 
+        • ‘RLINEXT\_CO\_1.inp’
 
+        • ‘RLINEXT\_CO\_1.out’
 
-**Receptors Tab**
+        • ‘[Source]\_[Pollutant]\_[Period]’
 
-**33**
 
 
 
 
+**Running AERMOD**
 
-**Receptors Tab**
+Reminder: running AERMOD may take seconds, minutes, hours, or even days, depending on the size of network, number of receptors, and modeling time period
 
-**A description on how to prepare for**
 
-**receptors in this Tab**
 
-**A graphic description of receptors**
 
-**34**
 
+***Results Tab***
 
+Results Tab takes AERMOD output files ‘.out’, organize concentration results into csv files, and visualize concentration profile in heat map
 
+---------------[Insert Pic 18]---------------------------------------
 
+• Click to upload AERMOD ‘.out’ and organize concentration into ‘.csv’ file. Takes seconds to minutes, depending on the number of receptor results. In the example, ‘RLINEXT_Line_CO_1.out’ was uploaded
 
-**Receptors Tab – Near Road Receptors**
+‘RLINEXT_Line_CO_1.out’ in text format
 
-**Users may choose to either upload csv of receptors configuration**
+-------------------------[Insert Pic 19]---------------------------------------
 
-**(1.1), or directly type in box chart (1.2). In this example, we uploaded**
+‘RLINEXT_Line_CO_1.csv’
 
-**‘receptor\_layers.csv’**
+----------------------------------------[Insert Pic 20]-----------------------------------------
 
-For road type 1 (freeway in example),
 
-generate 4 layers of receptors at 5, 15,
 
-50, and 100 meters away from road
 
-edge, with receptors interval of 20, 30,
+Users can type the concentration range to visualize (default as from 0 to maximum concentration value in the file) 
+Then click the button to visualize concentration (range 0 - 2)
 
-50 and 100 meters within each layer
+----------------------------------------------[Insert Pic 21]-----------------------------------------
 
-Configuration for near
 
-road receptors
 
-For road type 2 (arterial in example),
+Users can type the concentration range to visualize (default as from 0 to maximum concentration value in the file)
+Then click the button to visualize concentration (range 0 - 3)
 
-generate 3 layers of receptors at 5, 15,
+--------------------------------[Insert Pic 22]--------------------------------------------------
 
-and 50 meters away from road edge,
-
-with receptors interval of 20, 30 and 50
-
-meters within each layer
-
-**35**
-
-
-
-
-
-**Receptors Tab – Gridded Receptors**
-
-• **Enter intervals of gridded**
-
-**receptors (meters)**
-
-• **200 meters was entered in the**
-
-**example**
-
-**36**
-
-
-
-
-
-**Receptors Tab – Receptors Elevation**
-
-**Enter elevation of receptors from ground**
-
-**(1.5 to 1.6 meters recommended)**
-
-**37**
-
-
-
-
-
-**Receptors Tab**
-
-**Then, click this button to view distribution of generated receptors**
-
-**Click this button to generate receptors.**
-
-**Receptors coordinates will be stored at:**
-
-**‘\DC\_DupontCircle\results\receptors\_list.csv’**
-
-**38**
-
-
-
-
-
-**Receptors Tab – ‘receptors\_list.csv’**
-
-**‘X Y Z’ in AERMOD format**
-
-**Receptor ID**
-
-**39**
-
-
-
-
-
-**Emissions Tab**
-
-**Input**
-
-**Process**
-
-**Output**
-
-**Projected GIS w/**
-
-**new Cartesian**
-
-Data Tab
-
-**coordinate (m) &**
-
-**reference location**
-
-**Geometry for**
-
-**Line, AREA,**
-
-**and/or**
-
-**VOLUME source**
-
-Road Tab
-
-Receptors Tab
-
-**Emissions Tab**
-
-Compilation Tab
-
-Results Tab
-
-**Emissions Tab takes emission rate from**
-
-**GIS file and generate AERMOD emission**
-
-**rates for various AERMOD sources**
-
-**AERMOD**
-
-**Emission rates**
-
-**40**
-
-
-
-
-
-**Emissions Tab**
-
-**41**
-
-
-
-
-
-**Emissions Tab**
-
-**A description on how to generate emission files in this Ta b.**
-
-**All the generated emission files will be stored in**
-
-**‘\DC\_DupontCircle\results\emission\\*’**
-
-**42**
-
-
-
-
-
-**Emissions Tab**
-
-**If emission rate is not available, select ‘skip’**
-
-**and users can just create AERMOD input file**
-
-**without emission rate**
-
-**If emission rate is available, locate emission**
-
-**rate column in GIS, and identify the emission**
-
-**unit of this column**
-
-**43**
-
-
-
-
-
-**Emissions Tab**
-
-**Select source(s) to generate emission rate. For VOLUMN**
-
-**source, the road ‘VOLUME\_XX.csv’ file needs to be uploaded.**
-
-**Click this button to generate emission rate.**
-
-**Store the emission rate (‘em\_AREA.csv’,**
-
-**‘em\_LINE.csv’, ‘em\_RLINEXT.csv’, and**
-
-**‘em\_VOLUME\_XX.csv’) into**
-
-**“\DC\_DupontCircle\results\emission\\*”**
-
-**44**
-
-
-
-
-
-**Emissions Tab**
-
-**The generated emission rate csv files (‘em\_AREA.csv’, ‘em\_LINE.csv’, ‘em\_RLINEXT.csv’, and**
-
-**‘em\_VOLUME\_XX.csv’) contain one column ‘em\_aer’ – AERMOD emission rate.**
-
-**AERMOD Emission**
-
-**AERMOD Source**
-
-**Rate Unit**
-
-푔Τ푠Τ푚2
-
-푔Τ푠Τ푚
-
-푔Τ푠Τ푚2
-
-푔Τ푠
-
-LINE or RLINE
-
-RLINEXT
-
-AREA
-
-VOLUME
-
-**45**
-
-
-
-
-
-**Compilation Tab**
-
-**Input**
-
-**Process**
-
-**Output**
-
-Data Tab
-
-**Compilation Tab takes generated geometry csv (from**
-
-**Road Tab) , receptors csv (from Receptors Tab) , and**
-
-**emissions csv (from Emission Tab) , compile to**
-
-**AERMOD input file, and conduct AERMOD runs (if**
-
-**emissions are available)**
-
-**Geometry for**
-
-**Line, AREA,**
-
-**and/or**
-
-Road Tab
-
-Receptors Tab
-
-Emissions Tab
-
-**Compilation Ta b**
-
-Results Tab
-
-**VOLUME source**
-
-**Near-road**
-
-**receptors &**
-
-**gridded receptors**
-
-**AERMOD**
-
-**Emission rates**
-
-**AERMOD ‘.inp’**
-
-**& ‘.out’ file**
-
-**46**
-
-
-
-
-
-**Compilation Tab**
-
-**47**
-
-
-
-
-
-**Compilation Tab**
-
-**If you have emission csv files available from Emission Ta b, select ‘Run AERMOD’ and the tool will generate ‘.inp’**
-
-**file, run AERMOD, and generate ‘.out’ file from AERMOD. If emissions are not available ( e.g., skipped the**
-
-**Emission Tab), select ‘Emission unavailable’, and the tool can still compile a ‘.inp’ file without emission information**
-
-**48**
-
-
-
-
-
-**Compilation Tab**
-
-**Select pollutant type and modeling period.**
-
-**Depending on POLLUTID, the values of**
-
-**AVERTIME is consistent with NAAQS**
-
-**POLLUTID**
-
-**AVERTIME**
-
-1
-
-CO
-
-8
-
-1
-
-NO2
-
-ANNUAL
-
-24
-
-PM2.5
-
-PM10
-
-ANNUAL
-
-24
-
-1
-
-8
-
-24
-
-Others
-
-ANNUAL
-
-**49**
-
-
-
-
-
-**Compilation Tab**
-
-**Other information needed for AERMOD**
-
-**Click buttons to locate surface meteorology**
-
-**(.SFC) and upper profile meteorology (.PFL) file.**
-
-**1hr CO concentration is modeled in the example**
-
-**with meteorology file ‘test\_1h.SFC’ and**
-
-**‘test\_1h.PFL’ uploaded**
-
-**50**
-
-
-
-
-
-**Compilation Tab – Running AREA**
-
-**Compile and run AERMOD for various sources. Users can**
-
-**choose to run one or more sources as needed**
-
-**51**
-
-
-
-
-
-**Compilation Tab – Running AREA**
-
-**Compile and run AERMOD for AREA Source**
-
-**52**
-
-
-
-
-
-**Compilation Tab – Running AREA**
-
-**Upload ‘AREA.csv’ generated from Road Tab**
-
-**‘\DC\_DupontCircle\results\AREA.csv’**
-
-**Upload ‘receptors\_list.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\receptors\_list.csv’**
-
-**Upload ‘em\_AREA.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\emission\em\_AREA.csv’**
-
-**53**
-
-
-
-
-
-**Compilation Tab – Running AREA**
-
-**Compile ‘.inp’, run AERMOD, and generate ‘.out’.**
-
-**Files stored in ‘\DC\_DupontCircle\results\\*’**
-
-**For this example running CO concentration in 1**
-
-**hour, the files are named as:**
-
-• **‘AREA\_CO\_1.inp’**
-
-• **‘AREA\_CO\_1.out’**
-
-• **‘[Source]\_[Pollutant]\_[Period]’**
-
-**54**
-
-
-
-
-
-**Compilation Tab – Running VOLUME**
-
-**Compile and run AERMOD for VOLUME Source**
-
-**55**
-
-
-
-
-
-**Compilation Tab – Running VOLUME**
-
-**Upload ‘VOLUME\_XX.csv’ generated from Road Tab Upload ‘receptors\_list.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\VOLUME\_XX.csv’**
-
-**‘\DC\_DupontCircle\results\receptors\_list.csv’**
-
-**Upload ‘em\_VOLUME\_XX.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\emission\em\_VOLUME\_XX.csv’**
-
-**56**
-
-
-
-
-
-**Compilation Tab – Running VOLUME**
-
-**Compile ‘.inp’, run AERMOD, and generate ‘.out’.**
-
-**Files stored in ‘\DC\_DupontCircle\results\\*’**
-
-**For this example running CO concentration in 1**
-
-**hour, the files are named as:**
-
-• **‘VOLUME\_CO\_1.inp’**
-
-• **‘VOLUME\_CO\_1.out’**
-
-• **‘[Source]\_[Pollutant]\_[Period]’**
-
-**57**
-
-
-
-
-
-**Compilation Tab – Running LINE**
-
-**Compile and run AERMOD for LINE Source**
-
-**58**
-
-
-
-
-
-**Compilation Tab – Running LINE**
-
-**Upload ‘Line.csv’ generated from Road Tab**
-
-**‘\DC\_DupontCircle\results\Line.csv’**
-
-**Upload ‘receptors\_list.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\receptors\_list.csv’**
-
-**Upload ‘em\_LINE.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\emission\em\_LINE.csv’**
-
-**59**
-
-
-
-
-
-**Compilation Tab – Running LINE**
-
-**Compile ‘.inp’, run AERMOD, and generate ‘.out’.**
-
-**Files stored in ‘\DC\_DupontCircle\results\\*’**
-
-**For this example running CO concentration in 1**
-
-**hour, the files are named as:**
-
-• **‘LINE\_CO\_1.inp’**
-
-• **‘LINE\_CO\_1.out’**
-
-• **‘[Source]\_[Pollutant]\_[Period]’**
-
-**60**
-
-
-
-
-
-**Compilation Tab – Running RLINE**
-
-**Compile and run AERMOD for RLINE Source**
-
-**61**
-
-
-
-
-
-**Compilation Tab – Running RLINE**
-
-**Upload ‘Line.csv’ generated from Road Tab**
-
-**‘\DC\_DupontCircle\results\Line.csv’**
-
-**Upload ‘receptors\_list.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\receptors\_list.csv’**
-
-**Upload ‘em\_LINE.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\emission\em\_LINE.csv’**
-
-**62**
-
-
-
-
-
-**Compilation Tab – Running RLINE**
-
-**Compile ‘.inp’, run AERMOD, and generate ‘.out’.**
-
-**Files stored in ‘\DC\_DupontCircle\results\\*’**
-
-**For this example running CO concentration in 1**
-
-**hour, the files are named as:**
-
-• **‘RLINE\_CO\_1.inp’**
-
-• **‘RLINE\_CO\_1.out’**
-
-• **‘[Source]\_[Pollutant]\_[Period]’**
-
-**63**
-
-
-
-
-
-**Compilation Tab – Running RLINEXT**
-
-**Compile and run AERMOD for RLINEXT Source**
-
-**64**
-
-
-
-
-
-**Compilation Tab – Running RLINEXT**
-
-**Upload ‘Line.csv’ generated from Road Tab**
-
-**‘\DC\_DupontCircle\results\Line.csv’**
-
-**Upload ‘receptors\_list.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\receptors\_list.csv’**
-
-**Upload ‘em\_RLINEXT.csv’ generated from Receptors Tab**
-
-**‘\DC\_DupontCircle\results\emission\em\_RLINEXT.csv’**
-
-**65**
-
-
-
-
-
-**Compilation Tab – Running RLINEXT**
-
-**Compile ‘.inp’, run AERMOD, and generate ‘.out’.**
-
-**Files stored in ‘\DC\_DupontCircle\results\\*’**
-
-**For this example running CO concentration in 1**
-
-**hour, the files are named as:**
-
-• **‘RLINEXT\_CO\_1.inp’**
-
-• **‘RLINEXT\_CO\_1.out’**
-
-• **‘[Source]\_[Pollutant]\_[Period]’**
-
-**66**
-
-
-
-
-
-**Compilation Tab – Running AERMOD**
-
-**Reminder: running AERMOD may take**
-
-**seconds, minutes, hours, or even days,**
-
-**depending on the size of network, number of**
-
-**receptors, and modeling time period**
-
-**67**
-
-
-
-
-
-**Results Ta b**
-
-**Input**
-
-**Process**
-
-**Output**
-
-Data Tab
-
-Road Tab
-
-**Results Tab takes AERMOD output files ‘.out’,**
-
-**organize concentration results into csv files, and**
-
-**visualize concentration profile in heat map**
-
-Receptors Tab
-
-Emissions Tab
-
-Compilation Tab
-
-**Results Ta b**
-
-**AERMOD ‘.inp’**
-
-**& ‘.out’ file**
-
-**Concentration**
-
-**csv and profile**
-
-**68**
-
-
-
-
-
-**Results Ta b**
-
-**69**
-
-
-
-
-
-**Results Ta b**
-
-**Click to upload AERMOD ‘.out’ and organize concentration into ‘.csv’ file.**
-
-**Takes seconds to minutes, depending on the number of receptor results.**
-
-**In the example, ‘RLINEXT\_Line\_CO\_1.out’ was uploaded**
-
-**‘RLINEXT\_Line\_CO\_1.out’ in text format**
-
-**‘RLINEXT\_Line\_CO\_1.csv’**
-
-**70**
-
-
-
-
-
-**Results Ta b**
-
-**Users can type the concentration range to visualize**
-
-**(default as from 0 to maximum concentration value in the file)**
-
-**Then click the button to visualize concentration (range 0 - 2)**
-
-**71**
-
-
-
-
-
-**Results Ta b**
-
-**Users can type the concentration range to visualize**
-
-**(default as from 0 to maximum concentration value in the file)**
-
-**Then click the button to visualize concentration (range 0 - 3)**
-
-**72**
-
-
-
-
-
-**Questions?**
-
-**Questions?**
-
-**Haobing Liu**
-
-Assistant Professor
-
-Department of Civil, Construction and
-
-Environmental Engineering
-
-University of New Mexico
-
-[~~hliu332@unm.edu~~](mailto:hliu332@unm.edu)
-
-[~~Haobing.liu2012@gmail.com~~](mailto:Haobing.liu2012@gmail.com)
-
-**73**
-
-
-
-
-
-**Appendix – EPSG Input for ‘Atlanta\_SMALLSITE.shp’**
-
-**epsg projection 2240 - nad83 /**
-
-**georgia west (ftus)**
-
-[**https://www.spatialreference.org/**](https://www.spatialreference.org/ref/epsg/2240/)
-
-[**ref/epsg/2240/**](https://www.spatialreference.org/ref/epsg/2240/)
-
-**Same applies to**
-
-**“Atlanta\_RURAL.shp” and**
-
-**“Atlanta\_URBAN.shp”**
-
-**74**
-
-
-
-
-
-**Appendix – Albuquerque – I40 & I25 Interchange**
-
-GIS Source: <https://www.cabq.gov/gis/geographic-information-systems-data>
-
-**75**
-
-
-
-
-
-**Appendix – EPSG Input for ‘ABQ\_I40I25.shp’**
-
-**epsg projection 2903 - nad83(harn)**
-
-**/ new mexico central (ftus)**
-
-[**https://www.spatialreference.org/**](https://www.spatialreference.org/ref/epsg/2903/)
-
-[**ref/epsg/2903/**](https://www.spatialreference.org/ref/epsg/2903/)
-
-**76**
 
