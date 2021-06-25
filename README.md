@@ -331,7 +331,7 @@ Emissions Tab takes the emission rate from GIS file and generate AERMOD emission
 
 The generated emission rate csv files (‘em\_AREA.csv’, ‘em\_LINE.csv’, ‘em\_RLINEXT.csv’, and ‘em\_VOLUME\_XX.csv’) contain one column ‘em\_aer’ – AERMOD emission rate.
 
-![GTA 15](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic15.PNG)
+![GTA 15](https://github.com/mitchdolby/GIS_AERMOD_Project/blob/main/pictures/GTA_Pic15.png)
 
 
 
