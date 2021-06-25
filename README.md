@@ -84,7 +84,7 @@ Columns required from GIS:
 
 
 
-    **Origin EPSG**: the EPSG code for the uploaded GIS file:
+    Origin EPSG: the EPSG code for the uploaded GIS file:
 
     • This is the 4-digit code representing coordinate projection type of uploaded GIS
 
@@ -92,7 +92,7 @@ Columns required from GIS:
 
     • Coordinate info from ArcMap
   
-    **Destination EPSG**: ESPG code and unit for the local projected coordinate system:
+    Destination EPSG: ESPG code and unit for the local projected coordinate system:
 
     • This is the 4-digit code representing local Cartesian coordan systems that you want convert the GIS data to
 
@@ -186,29 +186,29 @@ Users can choose to generate the AERMOD surce type they are interested in:
 
 
 **Line Source** includes:
-     • A written description of the line source
-     • A graphic description of the line source in the "graphic example" button
-     • The "LINE columns" button generates columns of line geometry as "Line.csv"
-     • The "Generate Line" button generates the Line source geometry, and also stores as "Line.csv"
-     • The "Visualize Line" button to allows you to view the geometry of roadways in Line geometry
+    • A written description of the line source
+    • A graphic description of the line source in the "graphic example" button
+    • The "LINE columns" button generates columns of line geometry as "Line.csv"
+    • The "Generate Line" button generates the Line source geometry, and also stores as "Line.csv"
+    • The "Visualize Line" button to allows you to view the geometry of roadways in Line geometry
 
 
 
 **AREA Source** includes:
-     • A written description of the area source
-     • A graphic description of the area source in the "graphic example" button
-     • The "AREA coluumns" button generates columns of area geometry as "AREA.csv"
-     • The "Generate Area" button generates area source geometry as "AREA.csv"
-     • The "Visualize AREA" button allows you to view the geometry of roadways in AREA geometry
+    • A written description of the area source
+    • A graphic description of the area source in the "graphic example" button
+    • The "AREA coluumns" button generates columns of area geometry as "AREA.csv"
+    • The "Generate Area" button generates area source geometry as "AREA.csv"
+    • The "Visualize AREA" button allows you to view the geometry of roadways in AREA geometry
      
      
      
 **VOLUME Source** includes:
-     • A written description of the area source
-     • A graphic description of the volume source in the "graphic example" button
-     • The "VOLUME columns" button generates columns of volume geometry as "VOLUME_XX.csv"
-     • The "Generate VOLUME" button generates area source geometry as "VOLUME_XX.csv"
-     • The "Visualize VOLUME" button allows you to view the geometry of roadways in VOLUME geometry (it usually takes a long time to generate a volume graph)
+    • A written description of the area source
+    • A graphic description of the volume source in the "graphic example" button
+    • The "VOLUME columns" button generates columns of volume geometry as "VOLUME_XX.csv"
+    • The "Generate VOLUME" button generates area source geometry as "VOLUME_XX.csv"
+    • The "Visualize VOLUME" button allows you to view the geometry of roadways in VOLUME geometry (it usually takes a long time to generate a volume graph)
 
 
 
@@ -244,11 +244,17 @@ Receptors Tab takes projected GIS, generate near-road receptors and gridded rece
 
 **Near Road Receptors**
 
-    • Users may choose to either upload csv of receptors configuration (1.1), or directly type in box chart (1.2). In this example, we uploaded ‘receptor\_layers.csv’
+    • Users may choose to either upload csv of receptors configuration (1.1), 
+    or directly type in box chart (1.2). In this example, we uploaded 
+    ‘receptor\_layers.csv’
 
-    • For road type 1 (freeway in example), generate 4 layers of receptors at 5, 15, 50, and 100 meters away from road edge, with receptors interval of 20, 30, 50 and 100 meters within each layer
+    • For road type 1 (freeway in example), generate 4 layers of receptors at 5, 
+    15, 50, and 100 meters away from road edge, with receptors interval of 20, 
+    30, 50 and 100 meters within each layer
 `
-    • For road type 2 (arterial in example), generate 3 layers of receptors at 5, 15, and 50 meters away from road edge, with receptors interval of 20, 30 and 50 meters within each layer
+    • For road type 2 (arterial in example), generate 3 layers of receptors at 5, 
+    15, and 50 meters away from road edge, with receptors interval of 20, 30 and 
+    50 meters within each layer
 
 
 
@@ -267,7 +273,7 @@ Receptors Tab takes projected GIS, generate near-road receptors and gridded rece
 
 
 
-• Click this "Visualize receptors" to view distribution of generated receptors
+• Click the "Visualize receptors" to view distribution of generated receptors
 
 
 • Click "Generate receptors" to generate receptors.
